@@ -10,7 +10,7 @@ const MoviePage = () => {
   useEffect(() => {
     const fetchMovies = async () => {
       try {
-        const response = await axios.get('https://www.omdbapi.com/?s=avengers&apikey=851263c4');
+        const response = await axios.get('https://cors-anywhere.herokuapp.com/https://www.omdbapi.com/?s=avengers&apikey=851263c4');
         setMovies(response.data.Search); 
         setLoading(false);
       } catch (error) {
